@@ -15,7 +15,7 @@ import { BookModule } from './book/book.module';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        uri: configService.get('MONGO_URI'),
+        uri: configService.get('MONGO_URI_ATLAS'),
       }),
       inject: [ConfigService],
     }),
